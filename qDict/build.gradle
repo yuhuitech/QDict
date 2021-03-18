@@ -5,10 +5,10 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.annie.dictionary"
+        applicationId "com.annie.dictionary.fork"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 20191029
+        versionCode 20210415
         externalNativeBuild {
             cmake {
                 arguments '-DANDROID_STL=c++_shared'

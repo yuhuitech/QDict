@@ -1,0 +1,1 @@
+A dictionary application for dictionaries in StarDict format.
