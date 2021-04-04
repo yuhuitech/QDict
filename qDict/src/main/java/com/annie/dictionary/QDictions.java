@@ -196,8 +196,10 @@ public class QDictions {
 
         int k = 0;
         File[] files = f.listFiles();
-        if (files == null)
+        if (files == null) {
+            Log.e("QDictions", "Failed to read " + dictsPath + ", listFiles() returned null");
             return;
+        }
         String dictFolders[] = new String[files.length];
         String dictNames[] = new String[files.length];
 
