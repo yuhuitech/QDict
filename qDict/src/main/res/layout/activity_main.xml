@@ -32,12 +32,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:orientation="horizontal" />
 
-            <FrameLayout
-                android:id="@+id/frame_container"
-                android:layout_width="match_parent"
+            <ScrollView
+                android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/layout_footer"
-                app:layout_constraintTop_toBottomOf="@+id/nav_header" />
+                app:layout_constraintTop_toBottomOf="@+id/nav_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fillViewport="true">
+                <FrameLayout
+                    android:id="@+id/frame_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                     />
+            </ScrollView>
 
             <LinearLayout
                 android:id="@+id/layout_footer"
