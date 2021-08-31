@@ -40,11 +40,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:fillViewport="true">
-                <FrameLayout
-                    android:id="@+id/frame_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                     />
+            <FrameLayout
+                android:id="@+id/frame_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
             </ScrollView>
 
             <LinearLayout
