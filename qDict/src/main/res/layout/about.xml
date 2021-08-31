@@ -22,49 +22,50 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_app_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.3"></ImageView>
+        app:layout_constraintWidth_percent="0.3">
+    </ImageView>
 
     <com.mmt.widget.QTextView
         android:id="@+id/tv_app_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/app_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/mmt_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toEndOf="@+id/iv_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.3" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
     <com.mmt.widget.QTextView
         android:id="@+id/tv_app_version_label"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_version_label"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/mmt_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toEndOf="@+id/iv_icon"
-        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
-        app:layout_constraintWidth_percent="0.25" />
+        android:textColor="@color/mmt_black" />
 
     <com.mmt.widget.QTextView
         android:id="@+id/tv_app_version"
-        android:layout_width="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_version"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/mmt_black"
-        app:layout_constraintStart_toEndOf="@+id/tv_app_version_label"
-        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
-        app:layout_constraintWidth_percent="0.15" />
+        android:textColor="@color/mmt_black" />
 
+    </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     <LinearLayout
         android:id="@+id/author"
         android:layout_width="match_parent"
