@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/root_about"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/mmt_white"
-                android:paddingBottom="15dp"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mmt_white"
+    android:paddingBottom="15dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/icon_name_constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,56 +16,51 @@
             android:id="@+id/iv_icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.5"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_launcher"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_app_name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.3">
+            android:src="@drawable/ic_launcher">
         </ImageView>
 
-        <com.mmt.widget.QTextView
-            android:id="@+id/tv_app_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/mmt_black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.3" />
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/iv_icon"
-            app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
-            app:layout_constraintEnd_toEndOf="parent"
-            >
-            <com.mmt.widget.QTextView
-                android:id="@+id/tv_app_version_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_version_label"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/mmt_black" />
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <com.mmt.widget.QTextView
-                android:id="@+id/tv_app_version"
-                android:layout_marginStart="5dp"
+                android:id="@+id/tv_app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_version"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/mmt_black" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mmt.widget.QTextView
+                    android:id="@+id/tv_app_version_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_version_label"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/mmt_black" />
+
+                <com.mmt.widget.QTextView
+                    android:id="@+id/tv_app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/app_version"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/mmt_black" />
+            </LinearLayout>
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/author"
         android:layout_width="match_parent"
@@ -80,7 +75,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_author_label"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/mmt_black"/>
+            android:textColor="@color/mmt_black" />
 
         <com.mmt.widget.QTextView
             android:layout_width="wrap_content"
@@ -88,7 +83,7 @@
             android:layout_marginLeft="5dp"
             android:text="@string/app_author"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/mmt_black"/>
+            android:textColor="@color/mmt_black" />
     </LinearLayout>
 
     <LinearLayout
@@ -105,7 +100,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_license_label"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/mmt_black"/>
+            android:textColor="@color/mmt_black" />
 
         <com.mmt.widget.QTextView
             android:layout_width="wrap_content"
@@ -113,7 +108,7 @@
             android:layout_marginLeft="2dp"
             android:text="@string/app_license"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/mmt_black"/>
+            android:textColor="@color/mmt_black" />
     </LinearLayout>
 
     <LinearLayout
@@ -130,7 +125,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_email_label"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/mmt_black"/>
+            android:textColor="@color/mmt_black" />
 
         <com.mmt.widget.QTextView
             android:layout_width="wrap_content"
@@ -140,7 +135,7 @@
             android:linksClickable="true"
             android:text="@string/app_email"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/mmt_black"/>
+            android:textColor="@color/mmt_black" />
     </LinearLayout>
 
 </RelativeLayout>
